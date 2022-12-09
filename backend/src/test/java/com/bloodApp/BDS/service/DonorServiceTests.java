@@ -7,6 +7,8 @@ import com.bloodApp.BDS.services.DonorServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import java.util.Optional;
@@ -30,9 +32,6 @@ public class DonorServiceTests {
         when(donorRepositoryMock.save(donor)).thenReturn(donor);
         System.out.println(donorRepositoryMock);
         System.out.println(serviceImpl);
-
-
-
         System.out.println(savedDonor);
         assertThat(savedDonor).isNotNull();
     }
