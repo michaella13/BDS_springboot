@@ -8,7 +8,7 @@ const DonorsList = () => {
   
   useEffect(() => {
     axios
-      .get("http://localhost:4000/donors/")
+      .get("http://localhost:8080/donors")
       .then(({ data }) => {
         setDonors(data);
       })

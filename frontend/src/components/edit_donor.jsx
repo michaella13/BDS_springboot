@@ -16,7 +16,7 @@ const EditDonor = (props) => {
   const onSubmit = (donorObject) => {
     axios
       .put(
-        "http://localhost:4000/donors/update-donor/" +
+        "http://localhost:8080/donors" +
           props.match.params.id,
           donorObject
       )
@@ -33,7 +33,7 @@ const EditDonor = (props) => {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:4000/donors/update-donor/" 
+        "http://localhost:8080/donors" 
         + props.match.params.id
       )
       .then((res) => {

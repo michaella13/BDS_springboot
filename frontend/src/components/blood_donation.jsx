@@ -26,17 +26,18 @@ const DonationForm = (props) => {
         <FormGroup>
           <label htmlFor="">First Name</label>
             <Field name="firstName" type="text" 
-                className="form-control" />
+                className="form-control" id="firstName"/>
             <ErrorMessage
               name="firstName"
               className="d-block invalid-feedback"
               component="span"
+              
             />
           </FormGroup>
           <FormGroup>
           <label htmlFor="">Last Name</label>
             <Field name="lastName" type="text" 
-                className="form-control" />
+                className="form-control" id="lastName"/>
             <ErrorMessage
               name="lastName"
               className="d-block invalid-feedback"
@@ -46,7 +47,7 @@ const DonationForm = (props) => {
           <FormGroup>
           <label htmlFor="">Email</label>
             <Field name="email" type="text" 
-                className="form-control" />
+                className="form-control" id="email"/>
             <ErrorMessage
               name="email"
               className="d-block invalid-feedback"
@@ -56,7 +57,7 @@ const DonationForm = (props) => {
           <FormGroup>
           <label htmlFor="">Blood Type</label>
             <Field name="blood_type" type="text" 
-                className="form-control" />
+                className="form-control" id="blood_type" />
             <ErrorMessage
               name="blood_type"
               className="d-block invalid-feedback"
@@ -66,7 +67,7 @@ const DonationForm = (props) => {
           <FormGroup>
           <label htmlFor="">Number of packets</label>
             <Field name="number_of_packets" type="number" 
-                className="form-control" />
+                className="form-control" id="num_of_packets"/>
             <ErrorMessage
               name="number_of_packets"
               className="d-block invalid-feedback"
@@ -74,7 +75,7 @@ const DonationForm = (props) => {
             />
           </FormGroup>
           <Button variant="danger" size="lg" 
-            block="block" type="submit" className="my-4">
+            block="block" type="submit" className="my-4" data-cy="submit">
             {props.children} 
           </Button>
         </Form>

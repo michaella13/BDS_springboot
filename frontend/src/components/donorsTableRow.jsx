@@ -9,7 +9,7 @@ const DonorsTableRow = (props) => {
   const deleteDonor = () => {
     axios
       .delete(
-"http://localhost:4000/students/delete-donor/" + _id)
+"http://localhost:8080/donor" + _id)
       .then((res) => {
         if (res.status === 200) {
           alert("Donor successfully deleted");
